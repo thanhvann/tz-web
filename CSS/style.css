@@ -1,0 +1,76 @@
+* {
+  /* reset CSS */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #333;
+}
+
+button {
+  background-color: transparent;
+  padding: 15px 45px;
+  font-size: 25px;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+  margin: 0 30px;
+}
+
+.animation {
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  top: -100px;
+  bottom: -100px;
+  background-color: pink;
+  animation: around 3s infinite;
+}
+
+.button-real {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button:hover .button-real {
+  background-color: pink;
+}
+button:hover {
+  background-color: pink;
+  box-shadow: 5px 5px 10px pink;
+}
+
+button:nth-child(2) .animation {
+  background-color: mediumturquoise;
+}
+
+button:nth-child(2):hover {
+  background-color: mediumturquoise;
+  box-shadow: 5px 5px 10px mediumturquoise;
+}
+
+button:nth-child(2):hover .button-real {
+  background-color: mediumturquoise;
+}
+
+@keyframes around {
+  to {
+    transform: rotate(360deg);
+  }
+}
